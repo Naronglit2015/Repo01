@@ -1,7 +1,8 @@
 import { useState } from "react"
+import useTodo from "../hooks/useTodo"
 
-function FormAddTodo(props) {
-  const {hdlAdd} = props
+function FormAddTodo() {
+  const {hdlAdd} = useTodo()
   const [input, setInput] = useState('')
 
   const hdlSubmit = (e) => {

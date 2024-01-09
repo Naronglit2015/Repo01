@@ -1,7 +1,9 @@
 import { useState } from "react"
+import useTodo from "../hooks/useTodo"
 
 function TodoEditForm(props) {
-  const {job, onDone, hdlEdit} = props
+  const {job, onDone} = props
+  const {hdlEdit} = useTodo()
   const [input, setInput] = useState(job.todo)
   const [check, setCheck] = useState(job.completed)
 
